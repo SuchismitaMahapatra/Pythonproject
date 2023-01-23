@@ -1,0 +1,36 @@
+<html>
+    <head>
+         <title>Dashboard/Index</title> 
+    </head>
+        <style>
+            body{
+            background-color:#00FF00;
+            }
+        </style>
+    <body>
+        <span style='color:blue'>H stands for Hostelite D stands for Descular</span>
+        <table border='|' align='center'>
+            <tr>
+                <th bgcolor='red'>SRNO</th>   
+                <th bgcolor='red'>Name</th>
+                <th bgcolor='red'>Branch</th>
+                <th bgcolor='red'>RollNo</th>
+                <th bgcolor='red'>H/D</th>
+                <th bgcolor='red'>Edit</th>
+                <th bgcolor='red'>Delete</th>
+            </tr>    
+            {% for x in d %}
+            <tr>
+                <td bgcolor='orange'>{{x.0}}</td>
+                <td bgcolor='orange'>{{x.1}}</td>
+                <td bgcolor='orange'>{{x.2}}</td>
+                <td bgcolor='orange'>{{x.3}}</td>
+                <td bgcolor='orange'>{{x.4}}</td>
+                <td bgcolor='orange'><a href="edit/{{x.0}}">Edit</a></td>
+                <td bgcolor='orange'><a href="delete/{{x.0}}">Delete</a></td>
+            </tr>
+            {%endfor%}
+        </table>    
+<a href="/create">Create Details</a><br><br>       
+    </body>    
+</html>    
